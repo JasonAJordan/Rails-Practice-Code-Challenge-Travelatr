@@ -1,0 +1,22 @@
+<h1> The new post page! </h1>
+
+<%= form_for(@post) do |f| %>
+
+<label> Post Title: </label>
+<%= f.text_field :title %><br>
+
+<label> Post Content: </label>
+<%= f.text_area :content %><br>
+
+<label> Post Likes: </label>
+<%= f.number_field :likes %><br>
+
+<label> Blogger Name: </label>
+<%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
+
+<label> Destination: </label>
+<%= f.collection_select :destination_id, Destination.all, :id, :name %>
+
+<%= f.submit %>
+<% end %>
+

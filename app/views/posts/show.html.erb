@@ -1,0 +1,13 @@
+<h1>Post Page </h1>
+<p> Title: <%= @post.title %> </p>
+<p> Context: <%= @post.content%> </p>
+<p> Authtor <%= link_to @post.blogger.name, blogger_path(@post.blogger.id) %> </p>
+<p> Place <%= link_to @post.destination.name, destination_path(@post.destination.id) %> </p>
+<p> likes: <%= @post.likes %> </p>
+
+
+
+<%= form_for @post do |f| %>
+    <%= f.hidden_field :likes, value: @post.raise_like  %>
+    <%= f.submit %>
+<% end %>

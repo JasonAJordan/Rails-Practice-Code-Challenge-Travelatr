@@ -1,0 +1,17 @@
+<h1> The new blog page! </h1>
+
+<%= form_for(@blogger) do |f| %>
+
+<label> Blogger Name: </label>
+<%= f.text_field :name %><br>
+
+<label> Blogger Bio: </label>
+<%= f.text_area :bio %><br>
+
+<label> Blogger Age: </label>
+<%= f.number_field :age %><br>
+
+<%= f.submit %>
+<% end %>
+
+
